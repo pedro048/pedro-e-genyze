@@ -460,13 +460,14 @@ img { max-width: 100%; display: block; }
 .footer-names {
   font-family: var(--font-display);
   font-size: 2rem;
-  color: var(--teal-deep);
+  color: var(--purple-deep);
   margin: 0;
 }
+.footer-names .amp { color: var(--teal-deep); }
 .footer-date {
   font-family: var(--font-script);
   font-size: 1.4rem;
-  color: var(--gold);
+  color: var(--teal-deep);
   margin: 0.3rem 0 1rem;
 }
 .footer-note {
