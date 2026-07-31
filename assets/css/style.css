@@ -36,6 +36,7 @@ body {
 img { max-width: 100%; display: block; }
 
 .amp, .amp-big { font-family: var(--font-script); color: var(--gold); }
+.nav-brand .amp { color: var(--teal-deep); }
 
 /* ---------- Nav ---------- */
 .site-nav {
@@ -55,7 +56,7 @@ img { max-width: 100%; display: block; }
   font-family: var(--font-display);
   font-size: 1.6rem;
   font-weight: 600;
-  color: var(--teal-deep);
+  color: var(--purple-deep);
   text-decoration: none;
   letter-spacing: 0.05em;
 }
@@ -152,7 +153,7 @@ img { max-width: 100%; display: block; }
   font-size: 0.7em;
   margin: 0 0.15em;
   display: inline-block;
-  color: var(--gold);
+  color: var(--teal-deep);
   transform: translateY(-0.03em);
 }
 
