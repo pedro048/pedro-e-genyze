@@ -1,14 +1,16 @@
 :root {
-  --purple-deep: #6E5A9E;
-  --purple: #8E7CC3;
-  --purple-light: #C9B8E0;
-  --teal-deep: #1F6B75;
-  --teal: #4FA8AC;
-  --teal-light: #8FCFCB;
+  /* Paleta extraída do convite "Salve a Data" */
+  --purple-deep: #6B5A96;
+  --purple: #8874B8;
+  --purple-light: #C9BEE0;
+  --petal-purple: #8B6FB0;
+  --teal-deep: #2E7290;
+  --teal: #4FA0AC;
+  --teal-light: #8EC3C9;
   --gold: #C9A66B;
-  --cream: #FBF8F5;
-  --cream-2: #F3EEF8;
-  --text: #3B3550;
+  --cream: #F6F2F7;
+  --cream-2: #EFE7F1;
+  --text: #3A3450;
   --text-soft: #6B6480;
   --white: #ffffff;
 
@@ -16,7 +18,7 @@
   --font-script: "Great Vibes", cursive;
   --font-body: "Jost", sans-serif;
 
-  --shadow-soft: 0 20px 50px -20px rgba(110, 90, 158, 0.35);
+  --shadow-soft: 0 20px 50px -20px rgba(107, 90, 150, 0.35);
 }
 
 * { box-sizing: border-box; }
@@ -99,57 +101,113 @@ img { max-width: 100%; display: block; }
   align-items: center;
   justify-content: center;
   text-align: center;
-  padding: 8vh 6vw;
+  padding: 12vh 6vw 8vh;
   position: relative;
+  overflow: hidden;
   background:
-    radial-gradient(circle at 12% 10%, rgba(143, 207, 203, 0.55), transparent 45%),
-    radial-gradient(circle at 88% 15%, rgba(201, 184, 224, 0.6), transparent 50%),
-    radial-gradient(circle at 15% 90%, rgba(110, 90, 158, 0.25), transparent 45%),
-    radial-gradient(circle at 90% 85%, rgba(79, 168, 172, 0.35), transparent 45%),
-    var(--cream);
+    radial-gradient(ellipse 60% 50% at 0% 0%, rgba(142, 195, 201, 0.30), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 100% 100%, rgba(139, 111, 176, 0.26), transparent 60%),
+    linear-gradient(160deg, #FAF7FA 0%, var(--cream) 45%, #F0E9F4 100%);
 }
 
-.hero-content { max-width: 720px; }
+.hero-deco {
+  position: absolute;
+  width: clamp(220px, 30vw, 420px);
+  height: auto;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.92;
+}
+.hero-deco-tl { top: 0; left: 0; }
+.hero-deco-br { bottom: 0; right: 0; }
 
-.eyebrow {
-  text-transform: uppercase;
-  letter-spacing: 0.35em;
-  font-size: 0.8rem;
-  color: var(--purple-deep);
-  margin-bottom: 1.2rem;
+.hero-content { max-width: 720px; position: relative; z-index: 1; }
+
+.heart-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.8rem;
+  color: var(--gold);
+  font-size: 0.9rem;
+  margin: 0 auto 1.4rem;
+}
+.heart-divider span {
+  width: 46px;
+  height: 1px;
+  background: var(--purple);
+  opacity: 0.5;
+}
+
+.hero-salve {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(3rem, 10vw, 6.5rem);
+  letter-spacing: 0.06em;
+  color: var(--teal-deep);
+  margin: 0;
+  line-height: 1;
+}
+
+.hero-script {
+  font-family: var(--font-script);
+  font-size: clamp(2.2rem, 7vw, 4.2rem);
+  color: var(--purple);
+  margin: -0.3rem 0 1.2rem;
+  line-height: 1;
 }
 
 .hero-names {
   font-family: var(--font-display);
   font-weight: 600;
-  font-size: clamp(2.8rem, 8vw, 5.5rem);
-  color: var(--teal-deep);
+  font-size: clamp(1.8rem, 4.5vw, 2.6rem);
+  color: var(--text);
   margin: 0;
   line-height: 1.1;
 }
 
 .hero-names .amp-big {
-  font-size: 0.55em;
+  font-size: 0.75em;
   margin: 0 0.15em;
   display: inline-block;
-  transform: translateY(-0.05em);
+  color: var(--gold);
+  transform: translateY(-0.03em);
 }
 
 .hero-sub {
   font-family: var(--font-script);
-  font-size: clamp(1.6rem, 4vw, 2.4rem);
-  color: var(--gold);
-  margin: 0.3rem 0 1rem;
+  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  color: var(--teal-deep);
+  font-style: italic;
+  margin: 0.2rem 0 1.8rem;
 }
 
-.hero-date {
-  font-family: var(--font-display);
-  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
-  letter-spacing: 0.08em;
-  color: var(--text);
+.hero-date-block {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.7rem, 2.5vw, 1.4rem);
   margin: 0 0 2.5rem;
 }
-.hero-date span { color: var(--purple); font-style: italic; }
+.date-part {
+  font-family: var(--font-display);
+  color: var(--purple-deep);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 1rem;
+}
+.date-day {
+  font-size: clamp(2.2rem, 5vw, 3rem);
+  font-weight: 600;
+  color: var(--teal-deep);
+  letter-spacing: 0;
+}
+.date-divider {
+  width: 1px;
+  height: 34px;
+  background: var(--purple);
+  opacity: 0.45;
+}
 
 .countdown {
   display: flex;
@@ -466,6 +524,10 @@ img { max-width: 100%; display: block; }
   }
   .nav-links.open { transform: translateY(0); opacity: 1; }
   .nav-toggle { display: flex; }
+  .hero-deco { width: clamp(150px, 45vw, 240px); opacity: 0.8; }
+  .heart-divider span { width: 26px; }
+  .hero-date-block { gap: 0.5rem; }
+  .date-divider { height: 26px; }
   .countdown { gap: 0.6rem; }
   .countdown-item { min-width: 58px; padding: 0.6rem 0.4rem; }
   .ceremony-grid { grid-template-columns: 1fr; }
