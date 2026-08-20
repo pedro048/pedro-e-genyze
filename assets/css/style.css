@@ -99,10 +99,10 @@ img { max-width: 100%; display: block; }
 .hero {
   min-height: 100vh;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   text-align: center;
-  padding: 12vh 6vw 8vh;
+  padding: 9vh 6vw 8vh;
   position: relative;
   overflow: hidden;
   background:
@@ -184,6 +184,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: center;
   gap: clamp(0.8rem, 3vw, 2rem);
+  margin-top: clamp(5rem, 36vh, 19rem);
   margin-bottom: 3rem;
 }
 
