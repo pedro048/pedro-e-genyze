@@ -122,6 +122,17 @@ img { max-width: 100%; display: block; }
 .hero-deco-tl { top: 0; left: 0; }
 .hero-deco-tr { top: 0; right: 0; transform: scaleX(-1); }
 
+.hero-photo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -47%);
+  width: clamp(260px, 34vw, 460px);
+  height: auto;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .hero-content { max-width: 720px; position: relative; z-index: 1; }
 
 .heart-divider {
