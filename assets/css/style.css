@@ -146,6 +146,18 @@ img { max-width: 100%; display: block; }
   font-size: 0.9rem;
   margin: 0 auto 1.4rem;
 }
+.heart-divider .heart-purple,
+.heart-divider .heart-blue {
+  width: auto;
+  height: auto;
+  background: none;
+  opacity: 1;
+  font-size: 1rem;
+  line-height: 1;
+}
+.heart-divider .heart-purple { color: var(--purple-deep); }
+.heart-divider .heart-blue { color: var(--teal-deep); }
+
 .heart-divider span {
   width: 46px;
   height: 1px;
@@ -435,9 +447,72 @@ main {
 .gallery-item img {
   width: 100%; height: 100%;
   object-fit: cover;
+  cursor: pointer;
   transition: transform 0.5s ease;
 }
 .gallery-item:hover img { transform: scale(1.08); }
+
+/* Lightbox */
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: rgba(30, 24, 44, 0.88);
+  padding: 4vh 4vw;
+}
+.lightbox.open { display: flex; }
+
+.lightbox-img {
+  max-width: min(88vw, 900px);
+  max-height: 88vh;
+  border-radius: 16px;
+  box-shadow: 0 30px 70px -20px rgba(0, 0, 0, 0.6);
+  border: 1.5px solid rgba(255, 255, 255, 0.25);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 24px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.lightbox-close:hover { background: rgba(255, 255, 255, 0.25); }
+
+.lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.lightbox-nav:hover { background: rgba(255, 255, 255, 0.25); }
+.lightbox-prev { left: 16px; }
+.lightbox-next { right: 16px; }
+
+@media (max-width: 700px) {
+  .lightbox-nav { width: 42px; height: 42px; font-size: 1.6rem; }
+  .lightbox-close { width: 38px; height: 38px; font-size: 1.5rem; top: 12px; right: 12px; }
+}
 
 /* RSVP */
 .rsvp-text, .gifts-text {

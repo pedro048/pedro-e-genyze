@@ -78,6 +78,58 @@
     });
   }
 
+  // ---------- Gallery lightbox ----------
+  var galleryImgs = Array.prototype.slice.call(document.querySelectorAll(".gallery-item img"));
+  var lightbox = document.getElementById("lightbox");
+  var lightboxImg = document.getElementById("lightboxImg");
+  var lightboxClose = document.getElementById("lightboxClose");
+  var lightboxPrev = document.getElementById("lightboxPrev");
+  var lightboxNext = document.getElementById("lightboxNext");
+  var currentIndex = 0;
+
+  function openLightbox(index) {
+    currentIndex = (index + galleryImgs.length) % galleryImgs.length;
+    var img = galleryImgs[currentIndex];
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightbox.classList.add("open");
+    lightbox.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeLightbox() {
+    lightbox.classList.remove("open");
+    lightbox.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+  }
+
+  if (lightbox && galleryImgs.length) {
+    galleryImgs.forEach(function (img, index) {
+      img.addEventListener("click", function () {
+        openLightbox(index);
+      });
+    });
+
+    lightboxClose.addEventListener("click", closeLightbox);
+    lightboxPrev.addEventListener("click", function () {
+      openLightbox(currentIndex - 1);
+    });
+    lightboxNext.addEventListener("click", function () {
+      openLightbox(currentIndex + 1);
+    });
+
+    lightbox.addEventListener("click", function (e) {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.addEventListener("keydown", function (e) {
+      if (!lightbox.classList.contains("open")) return;
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") openLightbox(currentIndex - 1);
+      if (e.key === "ArrowRight") openLightbox(currentIndex + 1);
+    });
+  }
+
   // ---------- Reveal on scroll ----------
   var revealTargets = document.querySelectorAll(".section, .ceremony-card, .gallery-item");
   if ("IntersectionObserver" in window) {
