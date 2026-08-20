@@ -184,7 +184,7 @@ img { max-width: 100%; display: block; }
   display: flex;
   justify-content: center;
   gap: clamp(0.8rem, 3vw, 2rem);
-  margin-top: clamp(5rem, 36vh, 19rem);
+  margin-top: clamp(6rem, 46vw, 34rem);
   margin-bottom: 3rem;
 }
 
