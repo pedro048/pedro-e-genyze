@@ -131,6 +131,8 @@ img { max-width: 100%; display: block; }
   height: auto;
   z-index: 0;
   pointer-events: none;
+  border-radius: 0 0 24px 24px;
+  box-shadow: var(--shadow-soft);
 }
 
 .hero-content { max-width: 720px; position: relative; z-index: 1; }
@@ -158,6 +160,7 @@ img { max-width: 100%; display: block; }
   color: var(--purple-deep);
   margin: 0;
   line-height: 1.1;
+  text-shadow: 0 2px 4px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.7);
 }
 
 .hero-names .amp-big {
@@ -174,6 +177,7 @@ img { max-width: 100%; display: block; }
   color: var(--teal-deep);
   font-style: italic;
   margin: 0.2rem 0 2rem;
+  text-shadow: 0 2px 4px rgba(255,255,255,0.9), 0 0 30px rgba(255,255,255,0.7);
 }
 
 .countdown {
