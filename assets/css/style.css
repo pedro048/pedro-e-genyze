@@ -303,7 +303,7 @@ main {
   border-radius: 18px;
   padding: 2rem 1.4rem;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(142, 124, 195, 0.12);
+  border: 1.5px solid var(--purple-light);
 }
 
 .ceremony-icon { font-size: 2rem; margin-bottom: 0.8rem; }
@@ -370,7 +370,7 @@ main {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(142, 124, 195, 0.15);
+  border: 1.5px solid var(--purple-light);
   margin-bottom: 1.5rem;
   max-height: 420px;
 }
@@ -384,7 +384,7 @@ main {
   border-radius: 18px;
   overflow: hidden;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(142, 124, 195, 0.15);
+  border: 1.5px solid var(--purple-light);
   padding: 12px;
   background: var(--white);
 }
@@ -430,6 +430,7 @@ main {
   overflow: hidden;
   aspect-ratio: 3/4;
   box-shadow: var(--shadow-soft);
+  border: 1.5px solid var(--purple-light);
 }
 .gallery-item img {
   width: 100%; height: 100%;
@@ -460,7 +461,7 @@ main {
   border-radius: 20px;
   padding: 2.6rem 2.2rem;
   box-shadow: var(--shadow-soft);
-  border: 1px solid rgba(142, 124, 195, 0.14);
+  border: 1.5px solid var(--purple-light);
   display: flex;
   flex-direction: column;
   align-items: center;
