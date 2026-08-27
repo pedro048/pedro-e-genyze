@@ -36,6 +36,15 @@ body {
 img { max-width: 100%; display: block; }
 
 .amp, .amp-big { font-family: var(--font-script); color: var(--gold); }
+
+.heart-blue-mark, .heart-purple-mark {
+  font-family: var(--font-body);
+  font-size: 0.7em;
+  margin-left: 0.15em;
+  display: inline-block;
+}
+.heart-blue-mark { color: var(--teal-deep); }
+.heart-purple-mark { color: var(--purple-deep); margin-left: 0.05em; }
 .nav-brand .amp { color: var(--teal-deep); }
 
 /* ---------- Nav ---------- */
