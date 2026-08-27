@@ -295,6 +295,31 @@ main {
   color: var(--text-soft);
   margin-bottom: 1.4rem;
 }
+
+.story-verse {
+  margin: 2.2rem auto;
+  padding: 1.8rem 2.2rem;
+  max-width: 560px;
+  background: var(--cream-2);
+  border-left: 3px solid var(--gold);
+  border-radius: 4px 16px 16px 4px;
+}
+.story-verse p {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 1.25rem;
+  line-height: 1.6;
+  color: var(--purple-deep);
+  margin: 0 0 0.6rem;
+}
+.story-verse cite {
+  display: block;
+  font-style: normal;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--teal);
+}
 .story-content .story-signoff {
   font-family: var(--font-script);
   font-size: 2.4rem;
