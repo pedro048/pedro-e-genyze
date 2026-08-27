@@ -310,7 +310,7 @@ main {
   padding: 1.8rem 2.2rem;
   max-width: 560px;
   background: var(--cream-2);
-  border-left: 3px solid var(--gold);
+  border-left: 3px solid var(--teal-deep);
   border-radius: 4px 16px 16px 4px;
 }
 .story-verse p {
@@ -332,9 +332,10 @@ main {
 .story-content .story-signoff {
   font-family: var(--font-script);
   font-size: 2.4rem;
-  color: var(--gold);
+  color: var(--purple-deep);
   margin-top: 2rem !important;
 }
+.story-signoff .signoff-amp { color: var(--teal-deep); }
 
 /* Ceremony */
 .ceremony-grid {
